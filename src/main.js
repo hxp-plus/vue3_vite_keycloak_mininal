@@ -2,8 +2,18 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import router from '@/router';
+import mixin from './utils/mixin';
 
 const app = createApp(App);
+
+// 引入Vue路由
 app.use(router);
+
+// 混入公共的实例
+app.mixin(mixin);
+
+// 引入全局过滤器
+import { filters } from './utils/filters';
+app.config.globalProperties.$filters = filters;
 
 app.mount('#app');
