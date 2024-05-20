@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
         imports: ['vue', 'vue-router'],
       }),
       ,
-      eslint({ lintOnStart: true, cache: false }),
+      eslint({ lintOnStart: false, cache: false }),
     ], // 反向代理解决跨域问题
     server: {
       // host: 'localhost', // 只能本地访问

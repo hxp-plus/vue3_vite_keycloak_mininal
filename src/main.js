@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-// import './style.css';
 import App from './App.vue';
 import router from '@/router';
 import mixin from './utils/mixin';
@@ -30,6 +29,9 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 // pinia
 import { createPinia } from 'pinia';
 const pinia = createPinia();
+
+// 自定义样式
+import '@/styles/index.scss';
 
 // 持久化存储
 import { createPersistedState } from 'pinia-plugin-persistedstate';

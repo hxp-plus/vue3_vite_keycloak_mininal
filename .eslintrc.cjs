@@ -13,6 +13,10 @@ module.exports = {
   },
   plugins: ['vue', 'prettier'],
   rules: {
+    'vue/multi-word-component-names': 'off',
+    'vue/no-v-model-argument': 'off',
+    'no-undef': 'off',
+    'no-unused-vars': 'off',
     'prettier/prettier': 'error',
   },
   globals: { $ref: 'readonly', $computed: 'readonly', $shallowRef: 'readonly', $customRef: 'readonly', $toRef: 'readonly' },
