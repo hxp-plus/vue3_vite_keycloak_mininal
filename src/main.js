@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import './style.css';
+// import './style.css';
 import App from './App.vue';
 import router from '@/router';
 import mixin from './utils/mixin';
@@ -56,5 +56,11 @@ app.config.globalProperties.$store = store;
 // 配置全局api
 import api from '@/api';
 app.config.globalProperties.$api = api;
+
+// 全局组件注册
+import myComponents from '@/components/index';
+Object.keys(myComponents).forEach((key) => {
+  app.component(key, myComponents[key]);
+});
 
 app.mount('#app');
