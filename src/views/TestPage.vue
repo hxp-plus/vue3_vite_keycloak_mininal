@@ -1,18 +1,14 @@
 <template>
-  <div>Hello</div>
-  <h1>{{ $filters.sexName(1) }}</h1>
-  <el-button @click="handleClick">submit</el-button>
-  <el-icon><Edit /></el-icon>
+  <button @click="handleClick">click</button>
+  <h1>{{ res }}</h1>
 </template>
 
 <script setup>
 import { getCurrentInstance } from 'vue';
 const { proxy } = getCurrentInstance();
-const useTestStore = proxy.$store.test.useTestStore();
+let res = null;
 
 async function handleClick() {
-  useTestStore.add(1);
-  proxy.submitOk('ABC');
-  proxy.submitFail('提交失败');
+  res = await proxy.$api.demo.time();
 }
 </script>
