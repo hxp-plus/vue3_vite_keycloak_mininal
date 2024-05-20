@@ -7,3 +7,4 @@ public
 *.js
 *.cjs
 *.html
+auto-imports.d.ts
