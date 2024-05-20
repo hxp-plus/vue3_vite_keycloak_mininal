@@ -8,7 +8,7 @@ defineProps({
   },
 });
 
-const count = ref(0);
+let count = ref(0);
 </script>
 
 <template>

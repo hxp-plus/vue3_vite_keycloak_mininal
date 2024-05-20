@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
+    "dev": "vite --mode dev --host",
+    "prod": "vite --mode prod --host",
+    "build": "vite build --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "eslint-plugin-vue": "^9.26.0",
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
+    "unplugin-auto-import": "^0.17.6",
     "vite": "^5.2.0",
     "vite-plugin-eslint": "^1.8.1",
     "vue-eslint-parser": "^9.4.2"
