@@ -27,4 +27,11 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
 
+// 引入pinia和store
+import { createPinia } from 'pinia';
+const pinia = createPinia();
+app.use(pinia);
+import store from '@/store';
+app.config.globalProperties.$store = store;
+
 app.mount('#app');

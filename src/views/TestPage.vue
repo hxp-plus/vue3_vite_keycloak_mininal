@@ -8,8 +8,10 @@
 <script setup>
 import { getCurrentInstance } from 'vue';
 const { proxy } = getCurrentInstance();
+const useTestStore = proxy.$store.test.useTestStore();
 
 async function handleClick() {
+  useTestStore.add(1);
   proxy.submitOk('ABC');
   proxy.submitFail('提交失败');
 }
